@@ -14,9 +14,20 @@ function isWordPalindrome (wordInputUser){
     return isPalindrome;
 }
 
-//se la parola risulta palidroma, verrà stampata la parola altrimenti stamperà un messaggio di avviso del contrario
-if(isWordPalindrome(userWord)){
-    console.log(`La parola è palindroma: ${userWord}`);
+//creo una variabile per fare una verifica che il dato inserito non sia un numero
+const wordUserCheck = isNaN(userWord);
+
+//se l'utente ha inserito una parola, potrà proseguire con il giochino
+if (wordUserCheck){
+
+    //se la parola risulta palidroma, verrà stampata la parola altrimenti stamperà un messaggio di avviso del contrario
+    if(isWordPalindrome(userWord)){
+        console.log(`La parola è palindroma: ${userWord}`);
+    } else {
+        console.log('La parola non è palindroma.')
+    }
+
+//altrimenti si verificherà un errore
 } else {
-    console.log('La parola non è palindroma.')
+    console.error('Non hai inserito una parola!');
 }
