@@ -20,9 +20,9 @@ if (wordUserCheck){
     console.error('Non hai inserito una parola!');
 }
 //creo una funzione con un ciclo for per ricreare la parola immessa al contrario e determinarne un confronto
-function polindromeWord(wordInput) {
+function polindromeWord(wordInput) { //--->posso aggiungere un'altra condizione ovvero, che la parola immmessa si trasforma tutta minuscola in modo che se l'utente la scrive maiuscola non incorro in errore
     let reverseUserWord = '';
-    for (i = userWord.length - 1; i >= 0; i--) {
+    for (let i = userWord.length - 1; i >= 0; i--) {
         reverseUserWord += userWord[i];
     }
     console.log(reverseUserWord);

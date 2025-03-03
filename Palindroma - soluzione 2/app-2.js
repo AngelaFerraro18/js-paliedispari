@@ -5,7 +5,7 @@ const userWord = prompt('Inserisci una parola:');
 //creo una funzione per determinare che una parola sia palindroma o no
 function isWordPalindrome (wordInputUser){
     let isPalindrome = true;
-    for (i = 0; i < userWord.length/2; i++){
+    for (let i = 0; i < userWord.length/2; i++){
         if(userWord[i] !== userWord[userWord.length-1-i]){
             isPalindrome = false;
             break;
